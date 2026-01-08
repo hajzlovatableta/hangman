@@ -1,0 +1,132 @@
+:root {
+  --bg: #0f1220;
+  --card: #171a2b;
+  --text: #f2f3f7;
+  --muted: #a9afc3;
+  --border: #2b2f45;
+  --btn: #232744;
+  --btnHover: #2b2f55;
+  --primary: #3d7cff;
+  --primaryHover: #2f66d8;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+.container {
+  width: min(1000px, 92vw);
+  margin: 32px auto;
+  display: grid;
+  gap: 16px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 18px;
+}
+
+h1, h2 { margin: 0 0 10px; }
+ul { margin: 8px 0 0 18px; }
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.wrap { flex-wrap: wrap; }
+
+.center { text-align: center; }
+
+.muted { color: var(--muted); }
+.small { font-size: 0.9rem; }
+.big { font-size: 2rem; font-weight: 700; }
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.btn {
+  border: 1px solid var(--border);
+  background: var(--btn);
+  color: var(--text);
+  padding: 10px 14px;
+  border-radius: 12px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+.btn:hover { background: var(--btnHover); }
+
+.btn.primary {
+  background: var(--primary);
+  border-color: transparent;
+}
+
+.btn.primary:hover { background: var(--primaryHover); }
+
+.word {
+  font-size: 2.2rem;
+  letter-spacing: 0.25rem;
+  text-align: center;
+  padding: 8px 0;
+}
+
+.letters {
+  display: grid;
+  grid-template-columns: repeat(13, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.letterBtn {
+  padding: 10px 0;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: #1f2340;
+  color: var(--text);
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.letterBtn:hover { background: #272c52; }
+
+.letterBtn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.hangman {
+  margin: 10px 0 0;
+  padding: 12px;
+  border-radius: 12px;
+  background: #0c0f1b;
+  border: 1px solid var(--border);
+  overflow: auto;
+}
+
+.message {
+  min-height: 1.4em;
+  margin: 10px 0 0;
+  font-weight: 700;
+}
+
+.stat {
+  min-width: 160px;
+}

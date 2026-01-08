@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hangman - Game</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="card row">
+      <div>
+        <h1>Hangman</h1>
+        <p class="muted small">Press a letter key (A–Z) to guess.</p>
+      </div>
+      <div class="buttons">
+        <button class="btn" id="newGameBtn" type="button">New game</button>
+        <a class="btn" href="index.html">Home</a>
+      </div>
+    </header>
+
+    <section class="card">
+      <div class="row wrap">
+        <div class="stat">
+          <div class="muted small">Mistakes</div>
+          <div class="big"><span id="mistakes">0</span>/<span id="maxMistakes">6</span></div>
+        </div>
+
+        <div class="stat">
+          <div class="muted small">Guesses used</div>
+          <div class="big"><span id="guessCount">0</span></div>
+        </div>
+
+        <div class="stat">
+          <div class="muted small">Best score</div>
+          <div class="big"><span id="bestScoreGame">—</span></div>
+        </div>
+      </div>
+
+      <pre class="hangman" id="hangmanArt"></pre>
+    </section>
+
+    <section class="card">
+      <h2 class="center">Word</h2>
+      <div class="word" id="wordDisplay">_ _ _ _</div>
+      <p class="muted center small" id="infoText"></p>
+    </section>
+
+    <section class="card">
+      <h2>Used letters</h2>
+      <p class="muted">
+        Used: <span id="usedLetters">—</span>
+      </p>
+      <p class="message" id="message"></p>
+    </section>
+  </main>
+
+  <script src="js/game.js"></script>
+</body>
+</html>

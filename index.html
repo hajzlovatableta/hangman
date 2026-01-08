@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simple Hangman</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="card">
+      <h1>Simple Hangman</h1>
+    </header>
+
+    <section class="card">
+      <h2>How to play</h2>
+      <ul>
+        <li>Type letters on your keyboard to guess the hidden word.</li>
+        <li>Correct guesses reveal letters. Wrong guesses increase mistakes.</li>
+        <li>You lose after too many mistakes. You win by revealing the whole word.</li>
+        <li><strong>Score:</strong> total number of unique letter guesses used to win (lower is better).</li>
+      </ul>
+    </section>
+
+    <section class="card row">
+      <div>
+        <h2>Best score</h2>
+        <p class="big">
+          <span id="bestScore">—</span>
+          <span class="muted small">guesses</span>
+        </p>
+      </div>
+
+      <div class="buttons">
+        <a class="btn primary" href="game.html">Start</a>
+        <button class="btn" id="resetBtn" type="button">Reset best score</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/index.js"></script>
+</body>
+</html>
