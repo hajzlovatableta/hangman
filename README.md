@@ -10,8 +10,3 @@
 ## Score / Best score
 - Your **score** is the number of unique letter guesses you used to win.
 - Lower score = better.
-- The **best score** is saved in `localStorage` in your browser.
-
-## How to run
-### Option 1 (easy)
-Open `index.html` in your browser.
